@@ -8,6 +8,14 @@
         <img src="https://dcbadge.vercel.app/api/shield/854886148455399436?style=flat" alt="discord">
     </a>
     <br>
+    <a href="https://github.com/controlado/awakatime/issues/new">
+        <img src="https://img.shields.io/badge/Report%20a%20bug-gray" alt="report">
+    </a>
+    <a href="https://pypi.org/project/awakatime/">
+        <img src="https://img.shields.io/pypi/v/awakatime" alt="pypi">
+    </a>
+    <img src="https://img.shields.io/github/license/controlado/awakatime" alt="license">
+    <br>
     <img src="https://img.shields.io/badge/Documentation-gray" alt="documentation">
     <a href="README.md">
         <img src="https://img.shields.io/badge/English-blue" alt="english">
