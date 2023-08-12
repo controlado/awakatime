@@ -12,7 +12,7 @@
         <img src="https://img.shields.io/badge/Report%20a%20bug-gray" alt="report">
     </a>
     <a href="https://pypi.org/project/awakatime/">
-        <img src="https://img.shields.io/pypi/v/awakatime" alt="pypi">
+        <img src="https://img.shields.io/pypi/v/awakatime?color=green" alt="pypi">
     </a>
     <img src="https://img.shields.io/github/license/controlado/awakatime" alt="license">
     <br>
