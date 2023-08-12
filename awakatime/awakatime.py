@@ -138,7 +138,7 @@ class Awakatime:
         response_data = await response.json()
         return response_data["data"]
 
-    async def get_machine_names(self, user: str = "current") -> list[dict]:
+    async def get_machines(self, user: str = "current") -> list[dict]:
         """Get all machines data logged for the user.
 
         This method is a coroutine.
