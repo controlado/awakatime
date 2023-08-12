@@ -76,7 +76,7 @@ class Awakatime:
             dict: All time logged for the user.
 
         Raises:
-            KeyError: If the response data is missing the "data" key.
+            KeyError: If the response JSON is missing the "data" key.
             aiohttp.ClientResponseError: If the response status code is not 2xx.
         """
         endpoint = f"/api/v1/users/{user}/all_time_since_today"
@@ -93,7 +93,7 @@ class Awakatime:
         See https://wakatime.com/developers#commits for more information.
 
         Args:
-            project (str): Project name to filter by.
+            project (str): Project name to get the data from.
             user (str, optional): Wakatime user to get the data from.
 
         Kwargs:
@@ -102,7 +102,7 @@ class Awakatime:
             page (int, optional): Page number to get.
 
         Returns:
-            list[dict]: List of commits.
+            list[dict]: List of project commits.
 
         Raises:
             aiohttp.ClientResponseError: If the response status code is not 2xx.
@@ -129,7 +129,7 @@ class Awakatime:
             list[dict]: List of projects.
 
         Raises:
-            KeyError: If the response data is missing the "data" key.
+            KeyError: If the response JSON is missing the "data" key.
             aiohttp.ClientResponseError: If the response status code is not 2xx.
         """
         endpoint = f"/api/v1/users/{user}/projects"
@@ -139,7 +139,7 @@ class Awakatime:
         return response_data["data"]
 
     async def get_machine_names(self, user: str = "current") -> list[dict]:
-        """Get all machine names logged for the user.
+        """Get all machines data logged for the user.
 
         This method is a coroutine.
 
@@ -149,10 +149,10 @@ class Awakatime:
             user (str, optional): Wakatime user to get the data from.
 
         Returns:
-            list[dict]: List of user machines names.
+            list[dict]: List of user machines data.
 
         Raises:
-            KeyError: If the response data is missing the "data" key.
+            KeyError: If the response JSON is missing the "data" key.
             aiohttp.ClientResponseError: If the response status code is not 2xx.
         """
         endpoint = f"/api/v1/users/{user}/machine_names"
