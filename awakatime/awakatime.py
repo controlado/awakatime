@@ -138,5 +138,28 @@ class Awakatime:
         response_data = await response.json()
         return response_data["data"]
 
+    async def get_machine_names(self, user: str = "current") -> list[dict]:
+        """Get all machine names logged for the user.
+
+        This method is a coroutine.
+
+        See https://wakatime.com/developers#machine_names for more information.
+
+        Args:
+            user (str, optional): Wakatime user to get the data from.
+
+        Returns:
+            list[dict]: List of user machines names.
+
+        Raises:
+            KeyError: If the response data is missing the "data" key.
+            aiohttp.ClientResponseError: If the response status code is not 2xx.
+        """
+        endpoint = f"/api/v1/users/{user}/machine_names"
+
+        response = await self.request("GET", endpoint)
+        response_data = await response.json()
+        return response_data["data"]
+
     async def close(self):
         await self.session.close()
