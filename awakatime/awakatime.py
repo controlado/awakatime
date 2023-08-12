@@ -64,6 +64,8 @@ class Awakatime:
 
         This method is a coroutine.
 
+        See https://wakatime.com/developers#all_time_since_today for more information.
+
         Args:
             project_name (str, optional): Project name to filter by.
 
@@ -85,6 +87,8 @@ class Awakatime:
         """Get all projects for the current user.
 
         This method is a coroutine.
+
+        See https://wakatime.com/developers#projects for more information.
 
         Returns:
             list[dict]: List of projects.
