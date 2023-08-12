@@ -83,6 +83,32 @@ class Awakatime:
         response_data = await response.json()
         return response_data["data"]
 
+    async def get_commits(self, project_name: str, **kwargs) -> list[dict]:
+        """Get commits for a WakaTime project.
+
+        This method is a coroutine.
+
+        See https://wakatime.com/developers#commits for more information.
+
+        Args:
+            project_name (str): Project name to filter by.
+
+        Kwargs:
+            author (str, optional): Author name to filter by.
+            branch (str, optional): Branch name to filter by.
+            page (int, optional): Page number to get.
+
+        Returns:
+            list[dict]: List of commits.
+
+        Raises:
+            aiohttp.ClientResponseError: If the response status code is not 2xx.
+        """
+        endpoint = f"/api/v1/users/current/projects/{project_name}/commits"
+
+        response = await self.request("GET", endpoint, params=kwargs)
+        return await response.json()
+
     async def get_projects(self) -> list[dict]:
         """Get all projects for the current user.
 
