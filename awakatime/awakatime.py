@@ -107,7 +107,7 @@ class Awakatime:
         endpoint = f"/api/v1/users/current/projects/{project_name}/commits"
 
         response = await self.request("GET", endpoint, params=kwargs)
-        return await response.json()
+        return await response.json()  # a resposta é direta
 
     async def get_projects(self) -> list[dict]:
         """Get all projects for the current user.
