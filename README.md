@@ -29,7 +29,7 @@ from awakatime import Awakatime
 
 async def main():
     async with Awakatime("your_api_key") as awakatime:
-        await awakatime.get_all_time("your_projet")
+        await awakatime.get_all_time("your_project")
 
 
 if __name__ == "__main__":
