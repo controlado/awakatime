@@ -1,6 +1,6 @@
 from aiohttp import ClientResponse, ClientSession
 
-from utils import encode_base64
+from awakatime.utils import encode_base64
 
 
 class Awakatime:
