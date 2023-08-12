@@ -9,8 +9,12 @@
     </a>
     <br>
     <img src="https://img.shields.io/badge/Documentation-gray" alt="documentation">
-    <img src="https://img.shields.io/badge/English-blue" alt="english">
-    <img src="https://img.shields.io/badge/Português%20Brasileiro-blue" alt="português">
+    <a href="README.md">
+        <img src="https://img.shields.io/badge/English-blue" alt="english">
+    </a>
+    <a href="README.br.md">
+        <img src="https://img.shields.io/badge/Português%20Brasileiro-blue" alt="português">
+    </a>
 </div>
 
 ## Installation
