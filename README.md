@@ -33,7 +33,10 @@ from awakatime import Awakatime
 
 async def main():
     async with Awakatime("your_api_key") as awakatime:
-        await awakatime.get_all_time("your_project")
+        tasks = [awakatime.get_all_time(), awakatime.get_projects()]
+        all_time, projects = await asyncio.gather(*tasks)
+        print(all_time)
+        print(projects)
 
 
 if __name__ == "__main__":
