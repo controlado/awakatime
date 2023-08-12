@@ -59,15 +59,18 @@ class Awakatime:
             **kwargs,
         )
 
-    async def get_all_time(self, project_name: str | None = None) -> dict:
-        """Get all time logged for the user.
+    async def get_all_time(self, user: str = "current", **kwargs) -> dict:
+        """Get total time logged for the user.
 
         This method is a coroutine.
 
         See https://wakatime.com/developers#all_time_since_today for more information.
 
         Args:
-            project_name (str, optional): Project name to filter by.
+            user (str, optional): Wakatime user to get the data from.
+
+        Kwargs:
+            project (str, optional): Project name to filter by.
 
         Returns:
             dict: All time logged for the user.
@@ -76,14 +79,13 @@ class Awakatime:
             KeyError: If the response data is missing the "data" key.
             aiohttp.ClientResponseError: If the response status code is not 2xx.
         """
-        endpoint = "/api/v1/users/current/all_time_since_today"
-        params = {"project": project_name} if project_name else {}
+        endpoint = f"/api/v1/users/{user}/all_time_since_today"
 
-        response = await self.request("GET", endpoint, params=params)
+        response = await self.request("GET", endpoint, params=kwargs)
         response_data = await response.json()
         return response_data["data"]
 
-    async def get_commits(self, project_name: str, **kwargs) -> list[dict]:
+    async def get_commits(self, project: str, user: str = "current", **kwargs) -> list[dict]:
         """Get commits for a WakaTime project.
 
         This method is a coroutine.
@@ -91,7 +93,8 @@ class Awakatime:
         See https://wakatime.com/developers#commits for more information.
 
         Args:
-            project_name (str): Project name to filter by.
+            project (str): Project name to filter by.
+            user (str, optional): Wakatime user to get the data from.
 
         Kwargs:
             author (str, optional): Author name to filter by.
@@ -104,17 +107,23 @@ class Awakatime:
         Raises:
             aiohttp.ClientResponseError: If the response status code is not 2xx.
         """
-        endpoint = f"/api/v1/users/current/projects/{project_name}/commits"
+        endpoint = f"/api/v1/users/{user}/projects/{project}/commits"
 
         response = await self.request("GET", endpoint, params=kwargs)
         return await response.json()  # a resposta é direta
 
-    async def get_projects(self) -> list[dict]:
-        """Get all projects for the current user.
+    async def get_projects(self, user: str = "current", **kwargs) -> list[dict]:
+        """Get all projects logged for the user.
 
         This method is a coroutine.
 
         See https://wakatime.com/developers#projects for more information.
+
+        Args:
+            user (str, optional): Wakatime user to get the data from.
+
+        Kwargs:
+            q (str, optional): Filter projects by name.
 
         Returns:
             list[dict]: List of projects.
@@ -123,9 +132,9 @@ class Awakatime:
             KeyError: If the response data is missing the "data" key.
             aiohttp.ClientResponseError: If the response status code is not 2xx.
         """
-        endpoint = "/api/v1/users/current/projects"
+        endpoint = f"/api/v1/users/{user}/projects"
 
-        response = await self.request("GET", endpoint)
+        response = await self.request("GET", endpoint, params=kwargs)
         response_data = await response.json()
         return response_data["data"]
 
