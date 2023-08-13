@@ -3,12 +3,12 @@ import pytest
 from awakatime import Awakatime
 
 
-def test_base_url(awakatime: Awakatime):
+def test_base_url_is_correct(awakatime: Awakatime):
     assert awakatime.base_url == "https://wakatime.com"
 
 
 @pytest.mark.asyncio
-async def test_get_all_time(awakatime: Awakatime):
+async def test_get_all_time_is_working(awakatime: Awakatime):
     correct_keys = [
         "decimal",
         "digital",
@@ -26,7 +26,7 @@ async def test_get_all_time(awakatime: Awakatime):
 
 
 @pytest.mark.asyncio
-async def test_get_projects(awakatime: Awakatime):
+async def test_get_projects_is_working(awakatime: Awakatime):
     data = await awakatime.get_projects()
 
     assert isinstance(data, list)
