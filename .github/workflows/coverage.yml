@@ -3,7 +3,10 @@ name: Coverage
 on:
   workflow_dispatch:
   push:
-    
+    paths:
+      - awakatime/**
+      - tests/**
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,21 +19,20 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Install Poetry
+      - name: Instalando o Poetry
         uses: abatilo/actions-poetry@v2
 
-      - name: Install dependencies
+      - name: Instalando dependências
         run: poetry install --with dev
 
-      - name: Run tests
+      - name: Rodando os testes
         run: poetry run pytest --cov=. --cov-report=xml
         env:
             WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
 
-      - name: Upload coverage to Codecov
+      - name: Subindo o coverage para o Codecov
         uses: codecov/codecov-action@v3
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           file: ./coverage.xml
           flags: unittests
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
