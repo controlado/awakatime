@@ -8,17 +8,17 @@
         <img src="https://dcbadge.vercel.app/api/shield/854886148455399436?style=flat" alt="discord">
     </a>
     <br>
+    <a href="https://github.com/controlado/awakatime/issues/new">
+        <img src="https://img.shields.io/badge/Report%20a%20bug-gray" alt="report">
+    </a>
     <img src="https://img.shields.io/badge/Documentation-gray" alt="documentation">
     <a href="README.md">
         <img src="https://img.shields.io/badge/English-blue" alt="english">
     </a>
     <a href="README.br.md">
-        <img src="https://img.shields.io/badge/Português%20Brasileiro-blue" alt="português">
+        <img src="https://img.shields.io/badge/Português-blue" alt="português">
     </a>
     <br>
-    <a href="https://github.com/controlado/awakatime/issues/new">
-        <img src="https://img.shields.io/badge/Report%20a%20bug-gray" alt="report">
-    </a>
     <a href="https://codecov.io/gh/controlado/awakatime">
         <img src="https://codecov.io/gh/controlado/awakatime/branch/main/graph/badge.svg?token=86DTBWW41H">
     </a>
