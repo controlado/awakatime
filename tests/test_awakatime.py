@@ -3,6 +3,10 @@ import pytest
 from awakatime import Awakatime
 
 
+def test_base_url(awakatime: Awakatime):
+    assert awakatime.base_url == "https://wakatime.com"
+
+
 @pytest.mark.asyncio
 async def test_get_all_time(awakatime: Awakatime):
     correct_keys = [
