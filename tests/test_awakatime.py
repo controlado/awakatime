@@ -19,3 +19,11 @@ async def test_get_all_time(awakatime: Awakatime):
 
     assert isinstance(data, dict)
     assert all(key in data for key in correct_keys)
+
+
+@pytest.mark.asyncio
+async def test_get_projects(awakatime: Awakatime):
+    data = await awakatime.get_projects()
+
+    assert isinstance(data, list)
+    assert all(isinstance(item, dict) for item in data)
