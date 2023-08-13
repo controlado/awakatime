@@ -23,7 +23,7 @@ jobs:
         run: poetry install --with dev
 
       - name: Run tests
-        run: pytest --cov=. --cov-report=xml
+        run: poetry run pytest --cov=. --cov-report=xml
         env:
             WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
 
