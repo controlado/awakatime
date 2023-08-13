@@ -19,6 +19,9 @@
     <a href="https://github.com/controlado/awakatime/issues/new">
         <img src="https://img.shields.io/badge/Report%20a%20bug-gray" alt="report">
     </a>
+    <a href="https://codecov.io/gh/controlado/awakatime">
+        <img src="https://codecov.io/gh/controlado/awakatime/branch/main/graph/badge.svg?token=86DTBWW41H">
+    </a>
     <a href="https://pypi.org/project/awakatime/">
         <img src="https://img.shields.io/pypi/v/awakatime?color=green" alt="pypi">
     </a>
