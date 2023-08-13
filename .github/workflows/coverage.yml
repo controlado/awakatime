@@ -1,0 +1,28 @@
+name: Coverage
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+      - uses: abatilo/actions-poetry@v2
+
+      - name: Install dependencies
+        run: poetry install --only dev
+
+      - name: Run tests
+        run: poetry run pytest --cov=test/ --cov-report=xml
+        env:
+            WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./test/coverage.xml
+          flags: unittests
