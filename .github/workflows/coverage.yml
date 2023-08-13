@@ -8,18 +8,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
         with:
           python-version: 3.11
 
-      - uses: abatilo/actions-poetry@v2
+      - name: Install Poetry
+        uses: abatilo/actions-poetry@v2
 
       - name: Install dependencies
         run: poetry install --with dev
 
       - name: Run tests
-        run: poetry run pytest --cov=test/ --cov-report=xml
+        run: pytest --cov=. --cov-report=xml
         env:
             WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
 
