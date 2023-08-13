@@ -16,7 +16,7 @@ jobs:
       - uses: abatilo/actions-poetry@v2
 
       - name: Install dependencies
-        run: poetry install --only dev
+        run: poetry install --with dev
 
       - name: Run tests
         run: poetry run pytest --cov=test/ --cov-report=xml
