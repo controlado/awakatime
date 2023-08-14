@@ -61,10 +61,21 @@ if __name__ == "__main__":
 
 ## Development
 
-Make sure you have [Poetry](https://python-poetry.org/) installed.
+    git clone https://github.com/controlado/awakatime.git
+    cd awakatime
 
-```bash
-git clone https://github.com/controlado/awakatime.git
-cd awakatime
-poetry install --with dev
-```
+<details>
+    <summary>With Poetry</summary>
+
+    poetry install --with dev
+
+</details>
+
+<details>
+    <summary>Without Poetry</summary>
+
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements-dev.txt
+
+</details>
