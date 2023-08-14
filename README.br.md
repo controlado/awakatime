@@ -27,7 +27,7 @@
     <a href="https://pypi.org/project/awakatime/">
         <img src="https://img.shields.io/pypi/v/awakatime?color=red" alt="pypi">
     </a>
-    <img src="https://img.shields.io/github/license/controlado/awakatime?color=orange" alt="license">
+    <img src="https://img.shields.io/github/license/controlado/awakatime?color=red" alt="license">
 </div>
 
 ## Instalação
