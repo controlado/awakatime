@@ -25,9 +25,9 @@
         <img src="https://codecov.io/gh/controlado/awakatime/branch/main/graph/badge.svg?token=86DTBWW41H">
     </a>
     <a href="https://pypi.org/project/awakatime/">
-        <img src="https://img.shields.io/pypi/v/awakatime?color=green" alt="pypi">
+        <img src="https://img.shields.io/pypi/v/awakatime?color=red" alt="pypi">
     </a>
-    <img src="https://img.shields.io/github/license/controlado/awakatime" alt="license">
+    <img src="https://img.shields.io/github/license/controlado/awakatime?color=orange" alt="license">
 </div>
 
 ## Instalação
