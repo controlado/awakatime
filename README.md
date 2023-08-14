@@ -56,3 +56,13 @@ if __name__ == "__main__":
     coro = main()
     asyncio.run(coro)
 ```
+
+## Development
+
+Make sure you have [Poetry](https://python-poetry.org/) installed.
+
+```bash
+git clone https://github.com/controlado/awakatime.git
+cd awakatime
+poetry install --with dev
+```

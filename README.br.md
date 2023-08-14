@@ -56,3 +56,13 @@ if __name__ == "__main__":
     coro = main()
     asyncio.run(coro)
 ```
+
+## Desenvolvimento
+
+Não esqueça de instalar o [Poetry](https://python-poetry.org/) em seu ambiente.
+
+```bash
+git clone https://github.com/controlado/awakatime.git
+cd awakatime
+poetry install --with dev
+```
