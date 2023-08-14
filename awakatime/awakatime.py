@@ -6,6 +6,8 @@ from awakatime.utils import encode_base64
 class Awakatime:
     """Wakatime API client.
 
+    Class that contains the ways to integrate with the Wakatime API.
+
     Attributes:
         base_url (str): Base URL for the API.
         api_key (str): Encoded API key.
@@ -69,7 +71,7 @@ class Awakatime:
         Args:
             user (str, optional): Wakatime user to get the data from.
 
-        Kwargs:
+        Keyword Args:
             project (str, optional): Project name to filter by.
 
         Returns:
@@ -96,7 +98,7 @@ class Awakatime:
             project (str): Project name to get the data from.
             user (str, optional): Wakatime user to get the data from.
 
-        Kwargs:
+        Keyword Args:
             author (str, optional): Author name to filter by.
             branch (str, optional): Branch name to filter by.
             page (int, optional): Page number to get.
@@ -122,7 +124,7 @@ class Awakatime:
         Args:
             user (str, optional): Wakatime user to get the data from.
 
-        Kwargs:
+        Keyword Args:
             q (str, optional): Filter projects by name.
 
         Returns:
