@@ -36,6 +36,8 @@ pip install awakatime
 
 ## Uso
 
+O ideal é usar o gerenciador de contexto para criar uma instância do cliente.
+
 ```python
 import asyncio
 
