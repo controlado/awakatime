@@ -38,7 +38,7 @@ pip install awakatime
 
 ## Usage
 
-It"s recommended to use a context manager to create an instance of the client.
+It's recommended to use a context manager to create an instance of the client.
 
 ```python
 import asyncio
