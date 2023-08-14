@@ -25,7 +25,7 @@ theme:
       accent: blue
 
 plugins:
-  - search
+  - search:
   - mkdocstrings:
       handlers:
         python:
