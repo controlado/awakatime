@@ -44,7 +44,7 @@ class Awakatime:
             **kwargs: Additional arguments to pass to the request.
 
         Returns:
-            aiohttp.ClientResponse: Response from the API.
+            The response from the API.
 
         Raises:
             aiohttp.ClientResponseError: If the response status code is not 2xx.
@@ -75,7 +75,7 @@ class Awakatime:
             project (str, optional): Project name to filter by.
 
         Returns:
-            dict: All time logged for the user.
+            All time logged for the user.
 
         Raises:
             KeyError: If the response JSON is missing the "data" key.
@@ -104,7 +104,7 @@ class Awakatime:
             page (int, optional): Page number to get.
 
         Returns:
-            list[dict]: List of project commits.
+            List of project commits.
 
         Raises:
             aiohttp.ClientResponseError: If the response status code is not 2xx.
@@ -128,7 +128,7 @@ class Awakatime:
             q (str, optional): Filter projects by name.
 
         Returns:
-            list[dict]: List of projects.
+            List of projects.
 
         Raises:
             KeyError: If the response JSON is missing the "data" key.
@@ -151,7 +151,7 @@ class Awakatime:
             user (str, optional): Wakatime user to get the data from.
 
         Returns:
-            list[dict]: List of user machines data.
+            List of user machines data.
 
         Raises:
             KeyError: If the response JSON is missing the "data" key.
