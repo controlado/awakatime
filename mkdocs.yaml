@@ -9,7 +9,6 @@ theme:
   name: material
   language: en
   features:
-    - header.autohide
     - navigation.tabs
   font:
     text: Roboto
