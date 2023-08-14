@@ -11,12 +11,14 @@
     <a href="https://github.com/controlado/awakatime/issues/new">
         <img src="https://img.shields.io/badge/Report%20a%20bug-gray" alt="report">
     </a>
-    <img src="https://img.shields.io/badge/Documentation-gray" alt="documentation">
+    <a href="https://awakatime.readthedocs.io/en/latest/?badge=latest">
+        <img src="https://readthedocs.org/projects/awakatime/badge/?version=latest" alt="documentation">
+    </a>
     <a href="README.md">
-        <img src="https://img.shields.io/badge/English-blue" alt="english">
+        <img src="https://img.shields.io/badge/English-bright" alt="english">
     </a>
     <a href="README.br.md">
-        <img src="https://img.shields.io/badge/Português-blue" alt="português">
+        <img src="https://img.shields.io/badge/Português-bright" alt="português">
     </a>
     <br>
     <a href="https://codecov.io/gh/controlado/awakatime">
@@ -36,7 +38,7 @@ pip install awakatime
 
 ## Usage
 
-It's recommended to use a context manager to create an instance of the client.
+It"s recommended to use a context manager to create an instance of the client.
 
 ```python
 import asyncio
