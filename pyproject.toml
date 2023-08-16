@@ -28,7 +28,7 @@ mkdocs-material = "^9.1.21"
 test = "pytest -v --cov --cov-report=xml"
 black = "black awakatime tests"
 isort = "isort awakatime tests"
-lint = ["black", "isort"]
+format = ["black", "isort"]
 
 [tool.black]
 line-length = 95
