@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "awakatime"
-version = "1.1.9"
+version = "1.1.10"
 description = "A simple async wrapper for the Wakatime API"
 repository = "https://github.com/controlado/awakatime"
 documentation = "https://awakatime.readthedocs.io/en/latest/"
-keywords = ["wakatime", "api-wrapper", "asyncio", "async"]
+keywords = ["wakatime", "api-wrapper", "async"]
 authors = ["Yan Gabriel <yangabrielogy@gmail.com>"]
 readme = ["README.md"]
 license = "MIT"
